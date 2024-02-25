@@ -12,7 +12,10 @@ import { ValidRoles } from './interfaces/valid-roles.interface';
 import { UserRoleGuard } from './guards/user-role/user-role.guard';
 import { Auth } from './decorators/auth.decorator';
 import { JwtPayload } from './interfaces/jwt-payload.interface';
+import { ApiTags } from '@nestjs/swagger';
 
+
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(private readonly authService: AuthService) { }
